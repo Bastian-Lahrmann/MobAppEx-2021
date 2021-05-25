@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#009578">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobApp Entwurf 3</title>
+</head>
+<body>
+    <h1>NFC-Tags einlesen</h1>
+    <div id="top">
+      <img src = "FES-logo.png" alt = "FES-logo" class="fesLogo">
+
+      <p id="ndefSupport"></p>
+      <p id="p1">currently idle</p>
+  </div>
+    <button id = 'scan' class = 'button' onclick="ausgabe()">Activate Scanning</button>
+    
+
+    <!--   
+    <div class="vLineL"></div>
+    -->
+    
+    <div class = "fixedL">
+      <p id ="idPerson">:: SCAN_1 ::</p>
+      <p id ="dataPerson"></p>
+  </div>
+  <div class = "fixedR">
+      <p id ="idCompare">:: SCAN_2 ::</p>
+      <p id ="dataCompare"></p>
+  </div>
+    <script>
+      //includes serviceWorker on the html webpage
+      //https://developers.google.com/web/ilt/pwa/lab-scripting-the-service-worker
+      //we added serviceWorker preemptively to see if the Lighthouse extension from google Chrome is working
+      //with Lighthouse we can see which processes are missing for a PWA
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js')
+          .then(swReg => {
+            console.log('Service Worker is registered', swReg);
+          })
+          //catches an Error that might occur
+          .catch(err => {
+            console.error('Service Worker Error', err);
+          });
+        });
+      }
+    </script>
+</body>
+</html>

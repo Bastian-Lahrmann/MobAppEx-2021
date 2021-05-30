@@ -4,5 +4,17 @@
     "start_url": ".",
     "background_color": "white",
     "theme_color": "rgb(0, 58, 124)",
-    "display": "standalone"
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }

@@ -3,5 +3,6 @@
     "short_name": "FES-Führerscheinkontrolle",
     "start_url": ".",
     "background_color": "white",
-    "theme_color": "rgb(0, 58, 124)"
+    "theme_color": "rgb(0, 58, 124)",
+    "display": "standalone"
 }

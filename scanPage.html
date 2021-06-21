@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon192.png">
+
+    <meta name="theme-color" content="#009578">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fahrer-Check</title>
+
+<style> 
+    .show {display: block;}
+</style>
+
+</head>
+
+
+
+
+<body>
+    <div class="topnav">                     <!-- navigationsleiste mit logo-->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Überschrift</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#link1">LINK 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+            </div>
+        </div>
+        <img src = "FES-logo.png" alt = "FES-logo" class="fesLogo">
+    </div>
+
+    <div class = "centerButton">
+        <button id = 'scanButton' class = 'button' onclick="ausgabe()">Scan</button>
+    </div>
+
+    <div class = "fixedL">
+        <p id ="idPerson">:: SCAN_1 ::</p>
+        <p id ="dataPerson"></p>
+      </div>
+      <div class = "fixedR">
+        <p id ="idCompare">:: SCAN_2 ::</p>
+        <p id ="dataCompare"></p>
+      </div>
+    
+</body>
+
+<script>
+/* navigation an & ausschalten */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+<script src="rfid.js"></script>
+<script src="index.js"></script>
+
+</html>

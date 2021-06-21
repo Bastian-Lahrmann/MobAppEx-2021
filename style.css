@@ -51,7 +51,7 @@ div.centerButton {
     transform: translate(-50%, -50%);
 }
 
-div.scan-anzeige {
+#scan-anzeige {
     position: relative;
     visibility: hidden;
     width: 78%;
@@ -61,7 +61,6 @@ div.scan-anzeige {
 }
 div.fixedL {
     position: relative;
-    visibility: hidden;
     width: 78%;
     border: 3px solid rgb(0, 58, 124);
     text-align: center;

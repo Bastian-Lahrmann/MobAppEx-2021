@@ -36,7 +36,7 @@ function storeNfcValue(value){
         console.log(rfidOne+' stored as RFID_ONE');
         document.getElementById("idPerson").innerHTML = rfidOne;
         platzhalter(1);
-        document.getElementById(scan-anzeige1).style.visibility="visible";
+        document.getElementById(scan-anzeige).style.visibility="visible";
     } else if(value != rfidOne) {
         rfidTwo = value;
         console.log(rfidTwo+' stored as RFID_TWO');

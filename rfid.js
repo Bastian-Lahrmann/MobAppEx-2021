@@ -1,12 +1,8 @@
-//Shows on screen wheter the device supports web nfc, does not mean device has nfc hardware
-if ("NDEFReader" in window) { 
-    document.getElementById("ndefSupport").innerHTML = "Web-NFC is supported"
-} else{
-    document.getElementById("ndefSupport").innerHTML ='Web-NFC is NOT supported'
-}
+
 
 function ausgabe(){
-    document.getElementById("p1").innerHTML = "NOW Scanning ..."
+    document.getElementById("scanButton").style.fontSize = "20px";
+    document.getElementById("scanButton").innerHTML = "Scan..";
 }
 
 let eventID;
@@ -15,7 +11,7 @@ let rfidTwo;
 
 // NFC-reader snippet taken from "https://gerritniezen.com/getting-started-with-web-nfc"
 document.addEventListener('DOMContentLoaded', event => {
-    const scanButton = document.getElementById('scan');
+    const scanButton = document.getElementById('scanButton');
     const reader = new NDEFReader();
 
     scanButton.addEventListener('click', async () => {
@@ -40,21 +36,23 @@ function storeNfcValue(value){
         console.log(rfidOne+' stored as RFID_ONE');
         document.getElementById("idPerson").innerHTML = rfidOne;
         platzhalter(1);
+        document.getElementById("scan-anzeige1").style.visibility ="visible";
     } else if(value != rfidOne) {
         rfidTwo = value;
         console.log(rfidTwo+' stored as RFID_TWO');
         document.getElementById("idCompare").innerHTML = rfidTwo;
         platzhalter(2);
+        document.getElementById("scan-anzeige2").style.visibility ="visible";
     }
 
 }
 //changes the text when reading tags, just for optical reasons- can be discarded later
 function platzhalter(value){
     if(value == 1){
-        document.getElementById("dataPerson").innerHTML = "Hans Walter Steinmeier";
+        document.getElementById("dataPerson").innerHTML = "Max Mustermann";
     }
     if(value == 2){
-        document.getElementById("dataCompare").innerHTML = "Nummernschild";
+        document.getElementById("dataCompare").innerHTML = "Kehrmaschine 42";
     }
 
 }

@@ -51,10 +51,10 @@ function storeNfcValue(value){
 //changes the text when reading tags, just for optical reasons- can be discarded later
 function platzhalter(value){
     if(value == 1){
-        document.getElementById("dataPerson").innerHTML = "Hans Walter Steinmeier";
+        document.getElementById("dataPerson").innerHTML = "Max Mustermann";
     }
     if(value == 2){
-        document.getElementById("dataCompare").innerHTML = "Nummernschild";
+        document.getElementById("dataCompare").innerHTML = "Kehrmaschine 42";
     }
 
 }

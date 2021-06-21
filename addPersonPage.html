@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon192.png">
+
+    <meta name="theme-color" content="#009578">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fahrer-Check</title>
+
+<style> 
+    .show {display: block;}
+</style>
+
+</head>
+
+
+
+
+<body>
+    <div class="topnav">                     <!-- navigationsleiste mit logo-->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Menü</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="scanPage.html">Scan page</a>
+                <a href="addPage.html">Add page</a>
+                <a href="#link3">Link 3</a>
+            </div>
+            <button onclick="cancelFunction()" class="dropbtn">Abbruch</button>
+        </div>
+        <img src = "FES-logo.png" alt = "FES-logo" class="fesLogo">
+    </div>
+    <div class="fixedL">
+        <header><h2>Person</h2></header>
+        <form action="#" name="personForm">
+            <div class = "formbox">
+                <label for ="vorname">Vorname</label>
+                <input type="text" id="vorname" />
+            </div>
+            <div class ="formbox">
+                <label for ="nachname">Nachname</label>
+                <input type="text" id="nachname"/>
+            </div>
+            <div class = "formbox">
+                <label for ="personal_id">Personal ID</label>
+                <input type="text" id="personal_id"/>
+            </div>
+            <div class = "formbox">
+                <label for ="driver_license_nr">Führerscheinnummer</label>
+                <input type="text" id="driver_license_nr"/>
+            </div>
+            <div class = "formbox">
+                <label for ="license_class">Führerscheinklasse</label>
+                <select id ="char">
+                    <option value = "license_b">Führerscheinklasse B</option>
+                    <option value = "license_be">Führerscheinklasse BE</option>
+                    <option value = "license_t">Führerscheinklasse T</option>
+                    <option value = "license_l">Führerscheinklasse L</option>
+                    <option value = "license_c">Führerscheinklasse C</option>
+                    <option value = "license_ci">Führerscheinklasse CI</option>
+                    <option value = "license_ce">Führerscheinklasse CE</option>
+                    <option value = "license_c1e">Führerscheinklasse C1E</option>
+                    <option value = "license_d">Führerscheinklasse D</option>
+                    <option value = "license_d1">Führerscheinklasse D1</option>
+                    <option value = "license_de">Führerscheinklasse DE</option>
+                    <option value = "license_d1e">Führerscheinklasse D1E</option>
+                </select>
+            </div>
+        </form>
+    <header><h2>Qualifikationen / Schulungen </h2></header>
+    <div class="formbox">
+        <label for = "person_befoerderung">Personenbeförderungsschein</label>
+        <input type="radio" id="person_befoerderung">
+    </div>
+    <div class="formbox">
+        <label for = "person_laden">Sicheres be- und entladen</label>
+        <input type="radio" id="person_laden">
+    </div>
+    <div class="formbox">
+        <label for = "person_verkehrssicherheit">Verkehrssicherheit auf dem Betriebsgelände</label>
+        <input type="radio" id="person_verkehrssicherheit">
+    </div>
+    <div class="formbox">
+        <label for = "person_arbeitssicherheit">Arbeitssicherheit</label>
+        <input type="radio" id="person_arbeitssicherheit">
+    </div>
+    <div class ="scanButton">
+        <button id = 'buttonResetQual' onclick="resetQual()">Qualifikationen zurücksetzen</button>
+    <div class ="scanButton">
+        <button id = 'buttonResetQual' onclick="addQual()">Qualifikationen hinzufügen</button>
+    <div class = "scanButton">
+        <button id = 'buttonAddPerson' onclick="addPerson()">Person hinzufügen</button>
+    </div>    
+</div>
+</body>
+
+<script>
+/* navigation an & ausschalten */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+function cancelFunction(){
+    window.location.href = "addPage.html";
+}
+function addPerson(){
+}
+function addQual(){
+    
+}
+function resetQual(){
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+<script src="index.js"></script>
+<html>

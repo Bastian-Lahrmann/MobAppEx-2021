@@ -1,13 +1,8 @@
-//Shows on screen wheter the device supports web nfc, does not mean device has nfc hardware
-if ("NDEFReader" in window) { 
-    document.getElementById("ndefSupport").innerHTML = "Web-NFC is supported"
-} else{
-    document.getElementById("ndefSupport").innerHTML ='Web-NFC is NOT supported'
-}
+
 
 function ausgabe(){
     document.getElementById("scanButton").style.fontSize = "20px";
-    document.getElementById("scanButton").innerHTML = "Scanning..";
+    document.getElementById("scanButton").innerHTML = "Scan..";
 }
 
 let eventID;

@@ -53,6 +53,7 @@ div.centerButton {
 
 div.fixedR {
     position: relative;
+    visibility: hidden;
     width: 78%;
     border: 3px solid rgb(0, 58, 124);
     text-align: center;
@@ -60,6 +61,7 @@ div.fixedR {
 }
 div.fixedL {
     position: relative;
+    visibility: hidden;
     width: 78%;
     border: 3px solid rgb(0, 58, 124);
     text-align: center;

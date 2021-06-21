@@ -1,8 +1,8 @@
 self.addEventListener("install" , e => {
     e.waitUntil(
         caches.open("static").then(cache =>{
-          return cache.addAll(["./","./style.css","./images/icon192.png","./images/icon512.png","./images/maskable_icon192.png","./rfid.js","./versuch.js","./versuchStyle.css","./index.html","./FES-logo.png",
-     "manifest.json"]); 
+          return cache.addAll(["./","./style.css","./images/icon192.png","./images/icon512.png","./images/maskable_icon192.png","./rfid.js","./index.html","./FES-logo.png",
+     "manifest.json","./scanPage.html"]); 
         })
     );
 });

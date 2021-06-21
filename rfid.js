@@ -6,7 +6,8 @@ if ("NDEFReader" in window) {
 }
 
 function ausgabe(){
-    document.getElementById("p1").innerHTML = "NOW Scanning ..."
+    document.getElementById("scanButton").style.fontSize = "20px";
+    document.getElementById("scanButton").innerHTML = "Scanning..";
 }
 
 let eventID;
@@ -15,7 +16,7 @@ let rfidTwo;
 
 // NFC-reader snippet taken from "https://gerritniezen.com/getting-started-with-web-nfc"
 document.addEventListener('DOMContentLoaded', event => {
-    const scanButton = document.getElementById('scan');
+    const scanButton = document.getElementById('scanButton');
     const reader = new NDEFReader();
 
     scanButton.addEventListener('click', async () => {

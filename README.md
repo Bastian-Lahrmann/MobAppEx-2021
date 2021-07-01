@@ -15,4 +15,4 @@ How to get started:
 6: You are good to go!
 
 
-To scan tags you need to press the button >SCAN< first, then hold phone near tags - et voilà!
+To scan tags you need to press the button >Scan< first, then hold phone near tags - et voilà!

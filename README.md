@@ -6,9 +6,11 @@ How to get started:
 
 2: Open https://fes-mobappex.000webhostapp.com/
 
-3: Accept the Pop-Up asking for permission regarding NFC reading
+3: On the top it should say "Web-NFC is supported"
 
-4: You are good to go!
+4: Accept the Pop-Up asking for permission regarding NFC reading
+
+5: You are good to go!
 
 
 To scan tags you need to press the button >SCAN< first, then hold phone near tags - et voilà!

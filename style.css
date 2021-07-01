@@ -95,6 +95,15 @@ div.fixedL {
     margin-inline: 10%;
 }
 
+div.personPage{
+    position: relative;
+    width:88%;
+    border: 3px solid rgb(0, 58, 124);
+    text-align: initial;
+    margin-top:  10px;
+    margin-inline: 6%
+}
+
 
 .outer{
     margin-top: 10px;
@@ -161,20 +170,20 @@ div.fixedL {
 .dropdown a:hover {background-color: #ddd;}
 
 form{
-    margin: 2rem auto;
-    padding: 2rem;
-    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 78%;
 }
 
-.formBox{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2rem;
-    margin: 3rem 0;
+.formbox{
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
 label{
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.5rem 0.5rem;
     font-weight: 300 ;
     color:black;
@@ -194,6 +203,6 @@ textarea{
 }
 
 .scanButton{
-    padding: 0;
+    padding: 0.5rem;
 }
 

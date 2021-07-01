@@ -25,35 +25,38 @@
 <body>
     <div class="topnav">                     <!-- navigationsleiste mit logo-->
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Fahrer-Scan</button>
+            <button onclick="myFunction()" class="dropbtn">Hinzufügen</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="scanPage.html">Scan</a>
+                <a href="scanPage.html">Scan</a>
                 <a href="addPage.html">Hinzufügen</a>
                 <a href="databasePage.html">Datenbank</a>
             </div>
+            <button onclick="cancelFunction()" class="dropbtn">Abbruch</button>
         </div>
         <img src = "FES-logo.png" alt = "FES-logo" class="fesLogo">
     </div>
-
-
-    <div class = "scan-anzeige-1" id = "scan-anzeige1">
-        <p id ="idPerson">:: SCAN_1 ::</p>
-        <p id ="dataPerson"></p>
+    <div class = "fixedL">
+        <button onclick="moveToPersonDatabase()"" id ="databaseFahrer">Person Datenbank</p>
       </div>
-    <div class = "scan-anzeige-2" id = "scan-anzeige2">
-        <p id ="idCompare">:: SCAN_2 ::</p>
-        <p id ="dataCompare"></p>
+      <div class = "fixedR">
+        <button onclick="moveToVehicleDatabase()"" id ="databaseFahrzeug">Fahrzeug Datenbank</p>
       </div>
-      <div class = "scanButton">
-        <button id = 'scanButton' class = 'button' onclick="ausgabe()">Scan</button>
-    </div>
     
-
+</body>
 
 <script>
 /* navigation an & ausschalten */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+}
+function cancelFunction(){
+    window.location.href = "scanPage.html";
+}
+function moveToVehicleDatabase(){
+    window.location.href = "databasePerson.html";
+}
+function moveToPersonDatabase(){
+    window.location.href = "databaseVehicle.html";
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -71,9 +74,6 @@ window.onclick = function(event) {
 }
 
 </script>
-<script src="rfid.js"></script>
 <script src="index.js"></script>
-
-</body>
 
 </html>

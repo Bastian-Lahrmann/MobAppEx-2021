@@ -25,17 +25,17 @@
 <body>
     <div class="topnav">                     <!-- navigationsleiste mit logo-->
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Vehicle-Add</button>
+            <button onclick="myFunction()" class="dropbtn">Fahrzeug</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="scanPage.html">Scan page</a>
-                <a href="addPage.html">Add page</a>
-                <a href="#link3">Link 3</a>
+                <a href="scanPage.html">Scan</a>
+                <a href="addPage.html">Hinzufügen</a>
+                <a href="databasePage.html">datenbank</a>
             </div>
             <button onclick="cancelFunction()" class="dropbtn">Abbruch</button>
         </div>
         <img src = "FES-logo.png" alt = "FES-logo" class="fesLogo">
     </div>
-    <div class="fixedL">
+    <div class="personPage">
         <header><h2>Fahrzeug</h2></header>
         <form action="results.html" name="personForm" method="POST">
             <div class = "formbox">
@@ -46,43 +46,60 @@
                 <label for ="vehicle_id">Kennzeichen</label>
                 <input type="text" id="vehicle_id"/>
 
-            <div class = "formbox">
-                <label for ="license_nr">Fahrzeugtyp</label>
-                <select id ="char">
-                    <option value = "license_b">Führerscheinklasse B</option>
-                    <option value = "license_be">Führerscheinklasse BE</option>
-                    <option value = "license_t">Führerscheinklasse T</option>
-                    <option value = "license_l">Führerscheinklasse L</option>
-                    <option value = "license_c">Führerscheinklasse C</option>
-                    <option value = "license_ci">Führerscheinklasse CI</option>
-                    <option value = "license_ce">Führerscheinklasse CE</option>
-                    <option value = "license_c1e">Führerscheinklasse C1E</option>
-                    <option value = "license_d">Führerscheinklasse D</option>
-                    <option value = "license_d1">Führerscheinklasse D1</option>
-                    <option value = "license_de">Führerscheinklasse DE</option>
-                    <option value = "license_d1e">Führerscheinklasse D1E</option>
-                </select>
-            </div>
-        </form>
+                <header><h2>Führerscheinklasse</h2></header>
+                <div class = "formbox">
+                    <input type="radio" name="license_b" id=license_b> Führerscheinklasse B<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_be" id=license_be> Führerscheinklasse BE<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_t" id=license_t> Führerscheinklasse T<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_l" id=license_l> Führerscheinklasse L<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_c" id=license_c> Führerscheinklasse C<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_c1" id=license_c1> Führerscheinklasse C1<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_c1e" id=license_c1e> Führerscheinklasse C1E<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_ce" id=license_ce> Führerscheinklasse CE<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_d" id=license_d> Führerscheinklasse D<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_d1" id=license_d1> Führerscheinklasse D1<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_de" id=license_de> Führerscheinklasse DE<br /><br />
+                </div>
+                <div class = "formbox">
+                    <input type="radio" name="license_d1e" id=license_d1e> Führerscheinklasse D1E<br /><br />
+                </div>
         <header><h2>Qualifikationen / Schulungen </h2></header>
         <div class="formbox">
-            <label for = "person_befoerderung">Personenbeförderungsschein</label>
-            <input type="radio" name="person_befoerderung" id="person_befoerderung">
+            <input type="radio" name ="person_befoerderung" id="person_befoerderung"> Personenbeförderungsschein<br /><br />
         </div>
         <div class="formbox">
-            <label for = "person_laden">Sicheres be- und entladen</label>
-            <input type="radio" name="person_laden" id="person_laden">
+            <input type="radio" name ="person_laden" id="person_laden"> Sicheres be- und entladen<br /><br />
         </div>
         <div class="formbox">
-            <label for = "person_verkehrssicherheit">Verkehrssicherheit auf dem Betriebsgelände</label>
-            <input type="radio" name="person_verkehrssicherheit" id="person_verkehrssicherheit">
+            <input type="radio" name ="person_verkehrssicherheit" id="person_verkehrssicherheit"> Verkehrssicherheit<br /><br />
         </div>
         <div class="formbox">
-            <label for = "person_arbeitssicherheit">Arbeitssicherheit</label>
-            <input type="radio" name="person_arbeitssicherheit" id="person_arbeitssicherheit">
+            <input type="radio" name ="person_arbeitssicherheit" id="person_arbeitssicherheit"> Arbeitssicherheit<br /><br />
         </div>
         <div class ="scanButton">
-            <button id = 'buttonResetQual' class = '' onclick="resetQual()">Qualifikationen zurücksetzen</button>
+            <button id = 'buttonResetQual' class = '' onclick="reset()">Führerescheinklassen und Schulungen zurücksetzen</button>
+            <div class ="scanButton">
+                <button id = 'buttonResetQual' onclick="addQual()">Schulungen hinzufügen</button>
         <div class = "scanButton">
             <button id = 'buttonAddVehicle' class = '' onclick="addVehicle()">Fahrzeug hinzufügen</button>
         </div>    
@@ -100,7 +117,12 @@ function cancelFunction(){
 }
 function addVehicle(){}
 function addQual(){}
-function resetQual(){
+function reset(){
+    const radioBtns = document.querySelectorAll("input[type='radio] [name='"+name+"']");
+    radioBtns.forEach(radioBtns =>{
+        if(radioBtns.checked==true)
+        radioBtns.checked=false;
+    })
 }
 
 // Close the dropdown if the user clicks outside of it

@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fahrer-Check</title>
+    <title>Empty Page</title>
 
 <style> 
     .show {display: block;}
@@ -21,34 +21,24 @@
 
 
 
-
+<!-- navigationsleiste mit logo-->
 <body>
-    <div class="topnav">                     <!-- navigationsleiste mit logo-->
+    <div class="topnav">
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Fahrer-Scan</button>
+            <button onclick="myFunction()" class="dropbtn">Schulungen</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="scanPage.html">Scan</a>
+                <a href="scanPage.html">Scan</a>
                 <a href="addPage.html">Hinzufügen</a>
                 <a href="databasePage.html">Datenbank</a>
             </div>
+            <button onclick="cancelFunction()" class="dropbtn">Abbruch</button>
         </div>
         <img src = "FES-logo.png" alt = "FES-logo" class="fesLogo">
     </div>
 
 
-    <div class = "scan-anzeige-1" id = "scan-anzeige1">
-        <p id ="idPerson">:: SCAN_1 ::</p>
-        <p id ="dataPerson"></p>
-      </div>
-    <div class = "scan-anzeige-2" id = "scan-anzeige2">
-        <p id ="idCompare">:: SCAN_2 ::</p>
-        <p id ="dataCompare"></p>
-      </div>
-      <div class = "scanButton">
-        <button id = 'scanButton' class = 'button' onclick="ausgabe()">Scan</button>
-    </div>
     
-
+</body>
 
 <script>
 /* navigation an & ausschalten */
@@ -69,11 +59,7 @@ window.onclick = function(event) {
     }
   }
 }
-
 </script>
-<script src="rfid.js"></script>
-<script src="index.js"></script>
 
-</body>
 
 </html>

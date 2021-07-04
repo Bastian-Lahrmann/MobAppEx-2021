@@ -105,7 +105,7 @@
     <div class ="scanButton">
         <button id = 'buttonResetQual' onclick="reset()">Führerscheinklassen und Schulungen zurücksetzen</button>
     <div class ="scanButton">
-        <button id = 'buttonResetQual' onclick="addQual()">Schulungen hinzufügen</button>
+        <button id = 'buttonAddSchulungen' onclick="addQual()">Schulungen hinzufügen</button>
     <div class = "scanButton">
         <button id = 'buttonAddPerson' onclick="addPerson()">Person hinzufügen</button>
     </div>    
@@ -122,7 +122,13 @@ function cancelFunction(){
 }
 function addPerson(){
     rfid = localStorage.getItem("RFID");
+    var vorname = document.getElementById("vorname");
+    var nachname = document.getElementById("nachname");
+    var personal_id = document.getElementById("personal_id");
     console.log(rfid);
+    console.log(vorname);
+    console.log(nachname);
+    console.log(personal_id);
 }
 function addQual(){
 }

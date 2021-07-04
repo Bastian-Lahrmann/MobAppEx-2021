@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', event => {
 function storeNfcValue(value){
     if(rfidOne == undefined) {    
         rfidOne = value;
+        localStorage.setItem("RFID", rfidOne);
         console.log(rfidOne+' stored as RFID_ONE');
         document.getElementById("idPerson").innerHTML = rfidOne;
         platzhalter(1);

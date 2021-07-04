@@ -121,6 +121,8 @@ function cancelFunction(){
     window.location.href = "addPage.html";
 }
 function addPerson(){
+    rfid = localStorage.getItem("RFID");
+    console.log(rfid);
 }
 function addQual(){
 }
@@ -131,6 +133,7 @@ function reset(){
         radioBtns.checked=false;
     })
 }
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {

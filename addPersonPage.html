@@ -52,55 +52,55 @@
             </div>
             <header><h2>Führerscheinklasse</h2></header>
             <div class = "formbox">
-                <input type="radio" name="license_b" id=license_b> Führerscheinklasse B<br /><br />
+                <input type="radio" name="license_b" id=license_b value = 1 onclick = deClickB() > Führerscheinklasse B<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_be" id=license_be> Führerscheinklasse BE<br /><br />
+                <input type="radio" name="license_be" id=license_be value = 1> Führerscheinklasse BE<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_t" id=license_t> Führerscheinklasse T<br /><br />
+                <input type="radio" name="license_t" id=license_t value = 1> Führerscheinklasse T<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_l" id=license_l> Führerscheinklasse L<br /><br />
+                <input type="radio" name="license_l" id=license_l value = 1> Führerscheinklasse L<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_c" id=license_c> Führerscheinklasse C<br /><br />
+                <input type="radio" name="license_c" id=license_c value = 1> Führerscheinklasse C<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_c1" id=license_c1> Führerscheinklasse C1<br /><br />
+                <input type="radio" name="license_c1" id=license_c1 value = 1> Führerscheinklasse C1<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_c1e" id=license_c1e> Führerscheinklasse C1E<br /><br />
+                <input type="radio" name="license_c1e" id=license_c1e value = 1> Führerscheinklasse C1E<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_ce" id=license_ce> Führerscheinklasse CE<br /><br />
+                <input type="radio" name="license_ce" id=license_ce value = 1> Führerscheinklasse CE<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_d" id=license_d> Führerscheinklasse D<br /><br />
+                <input type="radio" name="license_d" id=license_d value = 1> Führerscheinklasse D<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_d1" id=license_d1> Führerscheinklasse D1<br /><br />
+                <input type="radio" name="license_d1" id=license_d1 value = 1> Führerscheinklasse D1<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_de" id=license_de> Führerscheinklasse DE<br /><br />
+                <input type="radio" name="license_de" id=license_de value = 1> Führerscheinklasse DE<br /><br />
             </div>
             <div class = "formbox">
-                <input type="radio" name="license_d1e" id=license_d1e> Führerscheinklasse D1E<br /><br />
+                <input type="radio" name="license_d1e" id=license_d1e value = 1> Führerscheinklasse D1E<br /><br />
             </div>
         <div class="formbox">
         </div>
     <header><h2>Qualifikationen / Schulungen </h2></header>
     <div class="formbox">
-        <input type="radio" name ="person_befoerderung" id="person_befoerderung"> Personenbeförderungsschein<br /><br />
+        <input type="radio" name ="person_befoerderung" id="person_befoerderung" value = 1> Personenbeförderungsschein<br /><br />
     </div>
     <div class="formbox">
-        <input type="radio" name ="person_laden" id="person_laden"> Sicheres be- und entladen<br /><br />
+        <input type="radio" name ="person_laden" id="person_laden" value = 1> Sicheres be- und entladen<br /><br />
     </div>
     <div class="formbox">
-        <input type="radio" name ="person_verkehrssicherheit" id="person_verkehrssicherheit"> Verkehrssicherheit<br /><br />
+        <input type="radio" name ="person_verkehrssicherheit" id="person_verkehrssicherheit" value = 1>Verkehrssicherheit<br /><br />
     </div>
     <div class="formbox">
-        <input type="radio" name ="person_arbeitssicherheit" id="person_arbeitssicherheit"> Arbeitssicherheit<br /><br />
+        <input type="radio" name ="person_arbeitssicherheit" id="person_arbeitssicherheit" value = 1> Arbeitssicherheit<br /><br />
     </div>
     <div class ="scanButton">
         <button id = 'buttonResetQual' onclick="reset()">Führerscheinklassen und Schulungen zurücksetzen</button>
@@ -121,20 +121,25 @@ function cancelFunction(){
     window.location.href = "addPage.html";
 }
 function addPerson(){
-    rfid = localStorage.getItem("RFID");
-    var vorname = document.getElementById("vorname");
-    var nachname = document.getElementById("nachname");
-    var personal_id = document.getElementById("personal_id");
-    console.log(rfid);
-    console.log(vorname);
-    console.log(nachname);
-    console.log(personal_id);
+    rfid = localStorage.getItem("RFID");    
 }
-function addQual(){
+function deClickB(){
+    const y = document.getElementById('license_b')
+    console.log(y.checked + " before")
+    switch (y.checked){
+    case true: 
+        document.getElementById('license_b').checked = false;
+        y.checked = false;
+        console.log(y.checked + " case true") 
+        break;
+    }
+    console.log(y.checked + " after")
+}
+function addQual(){ 
 }
 function reset(){
     const radioBtns = document.querySelectorAll("input[type='radio] [name='"+name+"']");
-    radioBtns.forEach(radioBtns =>{
+    radioBtns.forEach(radioBtns =>{ 
         if(radioBtns.checked==true)
         radioBtns.checked=false;
     })
@@ -156,6 +161,5 @@ window.onclick = function(event) {
 }
 
 </script>
-
 <script src="index.js"></script>
 <html>

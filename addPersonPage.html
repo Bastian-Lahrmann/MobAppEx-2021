@@ -46,6 +46,10 @@
                 <label for ="nachname">Nachname</label>
                 <input type="text" id="nachname"/>
             </div>
+            <div class="textarea">
+                <label for ="rfid">RFID</label>
+                <p id= "rfid">"rfid"</p>
+            </div>
             <header><h2>Führerscheinklasse</h2></header>
             <div class = "option">
                 <input type="checkbox" name="license_b" id=license_b  > Führerscheinklasse B<br /><br />
@@ -126,10 +130,8 @@ function cancelFunction(){
 }
 function addPerson(){
     rfid = localStorage.getItem("RFID");    
-    var x = document.getElementById("license_b").checked;
-    console.log(x)
 }
-
+document.getElementById("rfid").innerHTML = localStorage.getItem("RFID");
 function addQual(){ 
 }
 

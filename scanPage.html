@@ -23,7 +23,10 @@
 
 
 <body>
-    <div class="topnav">                     <!-- navigationsleiste mit logo-->
+    <div id="overlay" onclick="getElementById('overlay').style.display = 'none'">
+        <p id="overlayText"></p>
+    </div>
+    <div class="topnav" id="topbar">                     <!-- navigationsleiste mit logo-->
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Fahrer-Scan</button>
             <div id="myDropdown" class="dropdown-content">
@@ -72,7 +75,8 @@ window.onclick = function(event) {
 
 </script>
 <script src="rfid.js"></script>
-<script src="index.js"></script>
+
+
 </body>
 
 </html>

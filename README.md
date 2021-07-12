@@ -23,7 +23,8 @@ Unsere 'Home Seite' ist die Scan Page.
 In der Leiste am oberen Bildschirmrand sind das Logo der FES (rechts) und ein kleines Menü (links, blau hinterlegt), das die aktuelle Seite angibt und durch antippen weitere wichtige Seiten anzeigt, zu denen man navigieren kann (durch antippen).
 
 Auf der Scan-Seite werden die Tags nach dem scannen (mit tippen auf den Scan-Button, dann Handy nah an Tag halten) angezeigt und verglichen.
-Wenn alles gut ist färbt sich der Hintergrund grün, bei einem negativen Vergleich färbt sich der Hintergrund rot und eine Warnung erscheint mit den jeweiligen Gründen, wieso der Vergleich negativ ausfiehl.
+Wenn alles gut ist färbt sich der Hintergrund grün, bei einem negativen Vergleich färbt sich der Hintergrund rot und eine Warnung erscheint mit den jeweiligen Gründen, wieso der Vergleich negativ ausfiehl. Durch tippen in das Fenster, wird die Meldung geschlossen. 
+Wenn man einen neuen Vergleich machen möchte, muss man innerhalb des Bildschirms nach unten swipen, um die Seite neu zu laden 
 
 Sobald ein Tag gescannt wird erscheint unter >Scan< ein weiterer Button  (Nutzer/Fahrzeug)>Bearbeiten<. 
 Durch den Klick hierauf, kommt man auf die Update-Seiten der jeweiligen Tags und kann deren Qualifikationen und co bearbeiten, oder auch den Eintrag (Nutzer/Fahrzeug) komplett aus der Datenbank löschen.

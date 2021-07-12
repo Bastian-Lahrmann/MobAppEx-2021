@@ -43,20 +43,20 @@ Unter dem Menüpunkt >Datenbank< hat man die Option welche Datenbank man sich an
 Geräte wo es funktioniert:
 Samsung:
 s7
-S8
-S9
-S21+
-s10
-S10e
-s20Fe
-s20
+,S8
+,S9
+,S21+
+,s10
+,S10e
+,s20Fe
+,s20
 
 Google Pixel 3 XL
-Pixel 4a 5g
-Honor 20 lite
-HTC desire eye
-Mi10
-Huawei mate 10pro
-Htc 10
-Huawei p30 pro
-Huawei p20 lite
+,Pixel 4a 5g
+,Honor 20 lite
+,HTC desire eye
+,Mi10
+,Huawei mate 10pro
+,Htc 10
+,Huawei p30 pro
+,Huawei p20 lite
